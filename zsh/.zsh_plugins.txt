@@ -1,0 +1,12 @@
+# oh-my-zsh lib (required for themes)
+ohmyzsh/ohmyzsh path:lib
+
+# oh-my-zsh plugins
+ohmyzsh/ohmyzsh path:plugins/cargo
+ohmyzsh/ohmyzsh path:plugins/git
+
+# oh-my-zsh themes
+gdsrosa/minimal_improved
+
+# other plugins
+zsh-users/zsh-syntax-highlighting
