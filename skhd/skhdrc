@@ -1,0 +1,21 @@
+# ~/.config/skhd/skhdrc
+
+# yabai shortcuts
+
+# swap L-R
+ctrl + alt - right : yabai -m window --swap east
+
+# swap R-L
+ctrl + alt - left : yabai -m window --swap west
+
+# rotate clockwise 90
+ctrl + alt - l : yabai -m space --rotate 90
+
+# float window
+ctrl + alt - p : yabai -m window --toggle float
+
+# shrink window 
+ctrl + alt - 9 : yabai -m window --resize bottom_right:-30:-30
+
+# enlarge window 
+ctrl + alt - 0 : yabai -m window --resize bottom_right:30:30
