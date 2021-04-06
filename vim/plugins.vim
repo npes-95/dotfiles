@@ -4,6 +4,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'rust-lang/rust.vim'
-Plug 'sonph/onehalf', {'rtp': 'vim'}
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()

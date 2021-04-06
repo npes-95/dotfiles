@@ -1,3 +1,5 @@
+" ~/.vimrc
+
 syntax enable
 
 set nocompatible
@@ -23,8 +25,8 @@ set path+=**
 " display all matching files when we tab
 set wildmenu
 
-
 filetype plugin on
+filetype plugin indent on
 
 " make backspace work on macos
 if $PLATFORM =~ 'mac'
@@ -39,7 +41,7 @@ endif
 
 so ~/.vim/plugins.vim
 
-colorscheme onehalfdark
+colorscheme nord
 
 " match terminal/vim colours
 if exists('+termguicolors')
