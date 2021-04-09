@@ -2,20 +2,52 @@
 
 # yabai shortcuts
 
+
+# spaces
+
+# focus next workspace or wrap
+ctrl + alt - o : yabai -m space --focus next || yabai -m space --focus first
+
+# focus prev workspace or wrap
+ctrl + alt - i : yabai -m space --focus prev || yabai -m space --focus last
+
+# create space on active display and bring into focus
+ctrl + alt - n : yabai -m space --create && yabai -m space --focus next
+
+# destroy space on active display
+ctrl + alt - d : yabai -m space --destroy
+
+# rotate clockwise 90
+ctrl + alt - r : yabai -m space --rotate 90
+
+
+# windows
+
+# focus next or wrap
+ctrl + alt - l : yabai -m window --focus next || yabai -m window --focus first
+
+# focus prev or wrap
+ctrl + alt - k : yabai -m window --focus prev || yabai -m window --focus last
+
 # swap L-R
 ctrl + alt - right : yabai -m window --swap east
 
 # swap R-L
 ctrl + alt - left : yabai -m window --swap west
 
-# rotate clockwise 90
-ctrl + alt - l : yabai -m space --rotate 90
+# swap U-D
+ctrl + alt - down : yabai -m window --swap south
+
+# swap D-U
+ctrl + alt - up : yabai -m window --swap north
 
 # float window
 ctrl + alt - p : yabai -m window --toggle float
 
-# shrink window 
+# shrink floating window 
 ctrl + alt - 9 : yabai -m window --resize bottom_right:-30:-30
 
-# enlarge window 
+# enlarge floating window
 ctrl + alt - 0 : yabai -m window --resize bottom_right:30:30
+
+

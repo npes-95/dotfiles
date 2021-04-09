@@ -1,7 +1,8 @@
 # ~/.config/yabai/yabairc
 
-# set bsp mode
+# set bsp mode (only for external monitors)
 yabai -m config layout bsp
+yabai -m config --space 1 layout float
 
 # set padding
 yabai -m config top_padding 10
