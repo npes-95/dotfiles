@@ -1,8 +1,8 @@
 {
-  "workbench.colorTheme": "Atom One Dark",
+  "workbench.colorTheme": "Nord",
   "editor.detectIndentation": true,
-  "editor.fontFamily": "Menlo",
-  "editor.fontSize": 14,
+  "editor.fontFamily": "DejaVu Sans Mono",
+  "editor.fontSize": 13,
   "editor.largeFileOptimizations": true,
   "editor.highlightActiveIndentGuide": true,
   "editor.indentSize": 4,
