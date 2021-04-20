@@ -21,6 +21,9 @@ setopt hist_ignore_space
 setopt histignorealldups
 autoload history-search-end
 
+# aliases
+alias c="clear"
+
 # ---------------------------------
 # env variables
 # ---------------------------------
