@@ -41,6 +41,9 @@ endif
 
 so ~/.vim/plugins.vim
 
+" auto format rust files
+let g:rustfmt_autosave = 1
+
 colorscheme nord
 
 " match terminal/vim colours
