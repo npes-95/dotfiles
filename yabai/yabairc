@@ -15,3 +15,9 @@ yabai -m config window_gap 10
 yabai -m config window_opacity on
 yabai -m config active_window_opacity 1.0
 yabai -m config normal_window_opacity 0.95
+
+# float system preferences
+yabai -m rule --add app="^System Preferences$" manage=off
+
+# float qemu
+yabai -m rule --add title="^QEMU$" manage=off
