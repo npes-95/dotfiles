@@ -51,4 +51,4 @@ ctrl + alt - 9 : yabai -m window --resize bottom_right:-30:-30
 # enlarge floating window
 ctrl + alt - 0 : yabai -m window --resize bottom_right:30:30
 
-
+ctrl + alt - return : yabai -m window --grid 1:1:0:0:1:1
