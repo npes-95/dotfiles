@@ -55,6 +55,15 @@ fi
 export EDITOR='vim'
 
 # ---------------------------------
+# prompt
+# ---------------------------------
+
+autoload -Uz vcs_info # enable vcs_info
+precmd () { vcs_info } # always load before displaying the prompt
+zstyle ':vcs_info:*' formats ' / %b' # ' main'
+PS1='%F{yellow}%1~%f$vcs_info_msg_0_ > '
+
+# ---------------------------------
 # plugins
 # ---------------------------------
 
@@ -62,6 +71,3 @@ export EDITOR='vim'
 autoload -U +X compinit && compinit
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins.txt
-
-export ZSH_THEME=minimal_improved
-

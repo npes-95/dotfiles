@@ -5,8 +5,5 @@ ohmyzsh/ohmyzsh path:lib
 ohmyzsh/ohmyzsh path:plugins/cargo
 ohmyzsh/ohmyzsh path:plugins/git
 
-# oh-my-zsh themes
-gdsrosa/minimal_improved
-
 # other plugins
 zsh-users/zsh-syntax-highlighting
