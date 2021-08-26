@@ -1296,4 +1296,4 @@ schemes:
       cyan:    '0x00ffff'
       white:   '0xffffff'
 
-colors: *nord
+colors: *base16_dark
