@@ -18,6 +18,7 @@ set smartcase
 set noswapfile
 set nobackup
 set incsearch
+set encoding=utf-8
 
 " search down into subfolders 
 set path+=**
@@ -43,6 +44,9 @@ so ~/.vim/plugins.vim
 
 " auto format rust files
 let g:rustfmt_autosave = 1
+
+" coc extensions
+let g:coc_global_extensions = ['coc-rust-analyzer', 'coc-clangd', 'coc-python', 'coc-sh', 'coc-cmake', 'coc-json']
 
 " match terminal/vim colours
 if exists('+termguicolors')
