@@ -7,3 +7,4 @@ ohmyzsh/ohmyzsh path:plugins/git
 
 # other plugins
 zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-autosuggestions
