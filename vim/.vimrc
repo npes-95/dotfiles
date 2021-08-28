@@ -45,6 +45,9 @@ so ~/.vim/plugins.vim
 " auto format rust files
 let g:rustfmt_autosave = 1
 
+" auto format c++ files
+let g:clang_format#auto_format=1
+
 " coc extensions
 let g:coc_global_extensions = ['coc-rust-analyzer', 'coc-clangd', 'coc-python', 'coc-sh', 'coc-cmake', 'coc-json']
 
@@ -56,3 +59,6 @@ if exists('+termguicolors')
 endif
 
 colorscheme base16-default-dark
+
+" transparent background
+hi! Normal ctermbg=NONE guibg=NONE
