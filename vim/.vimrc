@@ -60,9 +60,8 @@ endif
 
 colorscheme base16-default-dark
 
-" toggle nerdtree
-let g:NERDTreeWinPos="left"
-map <C-n> :NERDTreeToggle<CR>
+" toggle nvimtree
+nnoremap <C-n> :NvimTreeToggle<CR>
 
 " transparent background
 hi! Normal ctermbg=NONE guibg=NONE
