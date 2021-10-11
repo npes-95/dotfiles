@@ -10,5 +10,6 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'rhysd/vim-clang-format', {'for' : ['c', 'cpp']}
 Plug 'pechorin/any-jump.vim'
+Plug 'junegunn/fzf.vim'
 
 call plug#end()

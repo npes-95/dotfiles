@@ -63,5 +63,14 @@ colorscheme base16-default-dark
 " toggle nvimtree
 nnoremap <C-n> :NvimTreeToggle<CR>
 
+" fzf file search
+nnoremap <C-p> :Files<CR>
+
+" fzf symbol search
+nnoremap <C-f> :Ag<CR>
+
+" refresh open file
+nnoremap <C-r> :checktime<CR>
+
 " transparent background
 hi! Normal ctermbg=NONE guibg=NONE
