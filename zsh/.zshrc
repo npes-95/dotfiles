@@ -21,9 +21,6 @@ setopt hist_ignore_space
 setopt histignorealldups
 autoload history-search-end
 
-# aliases
-alias c="clear"
-
 # ---------------------------------
 # env variables
 # ---------------------------------
@@ -53,6 +50,31 @@ fi
 
 # editor
 export EDITOR='vim'
+
+# ---------------------------------
+# scripts
+# ---------------------------------
+
+# helper scripts
+source ~/.scripts/*
+
+# aliases
+alias c="clear"
+alias td=todo.sh
+
+# fzf
+source /usr/share/fzf/shell/key-bindings.zsh
+source /usr/share/fzf/shell/completion.zsh
+
+# use fd to generate path candidates
+_fzf_compgen_path() {
+  fd --hidden --follow --exclude ".git" . "$1"
+}
+
+# use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+  fd --type d --hidden --follow --exclude ".git" . "$1"
+}
 
 # ---------------------------------
 # prompt
