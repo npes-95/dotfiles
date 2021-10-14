@@ -61,10 +61,16 @@ source ~/.scripts/*
 # aliases
 alias c="clear"
 alias td=todo.sh
+alias ret="echo $?"
 
 # fzf
-source /usr/share/fzf/shell/key-bindings.zsh
-source /usr/share/fzf/shell/completion.zsh
+if [[ $PLATFORM == 'mac' ]]; then
+    [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+else
+    source /usr/share/fzf/shell/key-bindings.zsh
+    source /usr/share/fzf/shell/completion.zsh
+fi
+
 
 # use fd to generate path candidates
 _fzf_compgen_path() {
