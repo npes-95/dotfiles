@@ -49,7 +49,7 @@ if [[ -d $HOME/.cargo/bin ]]; then
 fi
 
 # editor
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # ---------------------------------
 # scripts
