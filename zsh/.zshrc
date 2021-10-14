@@ -29,7 +29,7 @@ autoload history-search-end
 export TERM=xterm-256color
 
 # detect os
-[ -z "$OS" ] && export OS=`uname`
+[[ -z "$OS" ]] && export OS=`uname`
 case "$OS" in
   Linux)          export PLATFORM=linux ;;
   *indows*)       export PLATFORM=windows ;;
@@ -102,3 +102,4 @@ PS1='%F{yellow}%1~%f$vcs_info_msg_0_ > '
 autoload -U +X compinit && compinit
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins.txt
+
