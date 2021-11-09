@@ -99,7 +99,18 @@ PS1='%F{yellow}%1~%f$vcs_info_msg_0_ > '
 # ---------------------------------
 
 # antibody
-autoload -U +X compinit && compinit
-source <(antibody init)
-antibody bundle < ~/.zsh_plugins.txt
 
+# convenience function
+update_plugins() {
+    antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+    source ~/.zsh_plugins.sh
+}
+
+autoload -U +X compinit && compinit
+
+if [[ ! -e ~/.zsh_plugins.sh ]]; then
+    antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+fi
+
+
+source ~/.zsh_plugins.sh
