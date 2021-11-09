@@ -1,4 +1,4 @@
-" ~/.config/nvim/nvim.init
+" ~/.config/nvim/init.vim
 
 set nocompatible                    " disable compatibility to vi
 set showmatch                       " show matching 

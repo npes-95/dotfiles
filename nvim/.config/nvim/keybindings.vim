@@ -1,6 +1,10 @@
 " ~/.config/nvim/keybindings.vim
 
-nnoremap <C-f> :Ag<CR>              " fzf symbol search
-nnoremap <C-p> :Files<CR>           " fzf file search
-nnoremap <C-r> :checktime<CR>       " refresh open file
-nnoremap <C-n> :NvimTreeToggle<CR>  " togle nvimtree
+" fzf symbol search
+nnoremap <C-f> :Ag<CR>              
+" fzf file search
+nnoremap <C-p> :Files<CR>           
+" refresh open file
+nnoremap <C-r> :checktime<CR>       
+" toggle nvimtree           
+nnoremap <C-n> :NvimTreeToggle<CR>  
