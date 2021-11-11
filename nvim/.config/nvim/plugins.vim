@@ -23,6 +23,9 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
+" nvim-tree
+lua require'nvim-tree'.setup()
+
 " coc extensions
 let g:coc_global_extensions = ['coc-rust-analyzer', 'coc-clangd', 'coc-python', 'coc-sh', 'coc-cmake', 'coc-json']
 
