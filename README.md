@@ -12,3 +12,4 @@ Inspiration:
 - [tommoa](https://git.sr.ht/~tommoa/dots)
 - [kota](https://git.sr.ht/~kota/dots/tree/master)
 - [tide](https://github.com/Morganamilo/tide)
+- [jessarcher](https://github.com/jessarcher/dotfiles)
