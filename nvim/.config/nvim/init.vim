@@ -27,6 +27,7 @@ set encoding=utf-8
 set path+=**                        " search down into subfolders 
 set wildmenu                        " display all matching files when we tab
 
+nnoremap <C-r> :checktime<CR>
+
 so ~/.config/nvim/plugins.vim       " load and configure plugins
-so ~/.config/nvim/keybindings.vim   " load keybindings
 so ~/.config/nvim/onstart.vim       " load autocommands
