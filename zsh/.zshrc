@@ -11,11 +11,14 @@ setopt hist_ignore_space
 setopt histignorealldups
 autoload history-search-end
 
-source ~/.config/zsh/env.zsh
-source ~/.config/zsh/aliases.zsh
-source ~/.config/zsh/completion.zsh
-source ~/.config/zsh/plugins.zsh
-source ~/.config/zsh/prompt.zsh
+config_dir="$HOME/.config/zsh"
 
-# helper scripts
-source ~/.scripts/*
+source $config_dir/env.zsh
+source $config_dir/utils.zsh
+source $config_dir/aliases.zsh
+source $config_dir/completion.zsh
+source $config_dir/prompt.zsh
+source $config_dir/plugins.zsh
+source $config_dir/thirdparty.zsh
+
+has neofetch && neofetch
