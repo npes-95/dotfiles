@@ -3,3 +3,7 @@
 has () {
     return $(hash $1 2>/dev/null)
 }
+
+reload () {
+    source ~/.zshrc
+}
