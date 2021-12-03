@@ -1,5 +1,7 @@
 # ~/.config/zsh/plugins/fzf.zsh
 
+export FZF_COMPLETION_OPTS='--border --info=inline'
+
 if [[ $PLATFORM == 'mac' ]]; then
     [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 else
