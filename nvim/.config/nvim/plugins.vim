@@ -15,7 +15,6 @@ source ~/.config/nvim/plugins/cpp.vim
 source ~/.config/nvim/plugins/floaterm.vim
 source ~/.config/nvim/plugins/fzf.vim
 source ~/.config/nvim/plugins/nvim-tree.vim
-source ~/.config/nvim/plugins/rust.vim
 
 call plug#end()
 

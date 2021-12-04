@@ -2,7 +2,7 @@
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-let g:coc_global_extensions = ['coc-rust-analyzer', 'coc-clangd', 'coc-python', 'coc-sh', 'coc-cmake', 'coc-json']
+let g:coc_global_extensions = ['coc-rls', 'coc-clangd', 'coc-python', 'coc-sh', 'coc-cmake', 'coc-json']
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
