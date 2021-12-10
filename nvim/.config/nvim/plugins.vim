@@ -14,6 +14,7 @@ source ~/.config/nvim/plugins/coc.vim
 source ~/.config/nvim/plugins/cpp.vim
 source ~/.config/nvim/plugins/floaterm.vim
 source ~/.config/nvim/plugins/fzf.vim
+source ~/.config/nvim/plugins/gitgutter.vim
 source ~/.config/nvim/plugins/nvim-tree.vim
 
 call plug#end()
