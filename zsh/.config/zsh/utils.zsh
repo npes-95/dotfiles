@@ -5,5 +5,6 @@ has () {
 }
 
 reload () {
-    source ~/.zshrc
+    # see https://github.com/ohmyzsh/ohmyzsh/wiki/FAQ#how-do-i-reload-the-zshrc-file
+    exec zsh
 }
