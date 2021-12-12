@@ -1,5 +1,8 @@
 # ~/.zshrc
 
+# profiling
+#zmodload zsh/zprof
+
 # enable colors and change prompt:
 autoload -U colors && colors  
 setopt interactive_comments
@@ -22,3 +25,5 @@ source $config_dir/plugins.zsh
 source $config_dir/thirdparty.zsh
 
 has neofetch && neofetch
+
+#zprof
