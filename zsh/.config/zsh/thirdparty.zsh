@@ -2,7 +2,6 @@
 
 thirdparty_dir="$HOME/.config/zsh/thirdparty"
 
-has brew && source $thirdparty_dir/brew.zsh
 has cargo && source $thirdparty_dir/cargo.zsh
 has fzf && source $thirdparty_dir/fzf.zsh
 has git && source $thirdparty_dir/git.zsh
