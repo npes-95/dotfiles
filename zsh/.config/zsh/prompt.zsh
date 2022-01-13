@@ -6,4 +6,5 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '*'
 zstyle ':vcs_info:*' stagedstr '+'
 zstyle ':vcs_info:*' formats ' / %b%u'
-PS1='%1~%f$vcs_info_msg_0_ > '
+setopt prompt_subst
+PS1='%1~%f${vcs_info_msg_0_} > '
