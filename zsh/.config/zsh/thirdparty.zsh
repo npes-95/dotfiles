@@ -3,6 +3,7 @@
 thirdparty_dir="$HOME/.config/zsh/thirdparty"
 
 has cargo && source $thirdparty_dir/cargo.zsh
+has fnm && source $thirdparty_dir/fnm.zsh
 has fzf && source $thirdparty_dir/fzf.zsh
 has git && source $thirdparty_dir/git.zsh
 has nvim && source $thirdparty_dir/nvim.zsh
