@@ -7,6 +7,8 @@
 autoload -U colors && colors  
 setopt interactive_comments
 setopt mark_dirs
+setopt menucomplete
+setopt nomatch
 
 # history option
 setopt hist_ignore_dups
@@ -14,15 +16,15 @@ setopt hist_ignore_space
 setopt histignorealldups
 autoload history-search-end
 
-config_dir="$HOME/.config/zsh"
+zsh_config="$HOME/.config/zsh"
 
-source $config_dir/env.zsh
-source $config_dir/utils.zsh
-source $config_dir/aliases.zsh
-source $config_dir/completion.zsh
-source $config_dir/prompt.zsh
-source $config_dir/plugins.zsh
-source $config_dir/thirdparty.zsh
+source $zsh_config/env.zsh
+source $zsh_config/utils.zsh
+source $zsh_config/aliases.zsh
+source $zsh_config/completion.zsh
+source $zsh_config/prompt.zsh
+source $zsh_config/plugins.zsh
+source $zsh_config/thirdparty.zsh
 
 has neofetch && neofetch
 
