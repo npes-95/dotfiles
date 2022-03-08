@@ -52,7 +52,6 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua" --file tree
   use "akinsho/toggleterm.nvim" --terminal window manager
-  use "lukas-reineke/indent-blankline.nvim" --indent lines
   use "folke/which-key.nvim" --keymap prompt
   use "nvim-telescope/telescope.nvim" --fuzzy finder
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } --fzf extension for telescope
