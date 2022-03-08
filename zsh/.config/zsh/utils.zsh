@@ -18,28 +18,26 @@ function zsh_add_file () {
 }
 
 function zsh_add_plugin () {
-    PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
-    if [ -d "$zsh_config/plugins/$PLUGIN_NAME" ]; then 
-        # For plugins
-        zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh" || \
-        zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.zsh"
+    plugin_name=$(echo $1 | cut -d "/" -f 2)
+    if [ -d "$zsh_config/plugins/$plugin_name" ]; then
+        zsh_add_file "plugins/$plugin_name/$plugin_name.plugin.zsh" || \
+        zsh_add_file "plugins/$plugin_name/$plugin_name.zsh"
     else
-        git clone "https://github.com/$1.git" "$zsh_config/plugins/$PLUGIN_NAME"
+        git clone "https://github.com/$1.git" "$zsh_config/plugins/$plugin_name"
     fi
 }
 
 function zsh_add_completion() {
-    PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
-    if [ -d "$zsh_config/plugins/$PLUGIN_NAME" ]; then 
-        # For completions
-		completion_file_path=$(ls $zsh_config/plugins/$PLUGIN_NAME/_*)
-		fpath+="$(dirname "${completion_file_path}")"
-        zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh"
+    plugin_name=$(echo $1 | cut -d "/" -f 2)
+    if [ -d "$zsh_config/plugins/$plugin_name" ]; then
+		    completion_file_path=$(ls $zsh_config/plugins/$plugin_name/_*)
+		    fpath+="$(dirname "${completion_file_path}")"
+        zsh_add_file "plugins/$plugin_name/$plugin_name.plugin.zsh"
     else
-        git clone "https://github.com/$1.git" "$zsh_config/plugins/$PLUGIN_NAME"
-		fpath+=$(ls $zsh_config/plugins/$PLUGIN_NAME/_*)
+        git clone "https://github.com/$1.git" "$zsh_config/plugins/$plugin_name"
+		    fpath+=$(ls $zsh_config/plugins/$plugin_name/_*)
         [ -f $zsh_config/.zccompdump ] && $zsh_config/.zccompdump
     fi
-	completion_file="$(basename "${completion_file_path}")"
-	if [ "$2" = true ] && compinit "${completion_file:1}"
+	  completion_file="$(basename "${completion_file_path}")"
+  	if [ "$2" = true ] && compinit "${completion_file:1}"
 }
