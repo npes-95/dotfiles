@@ -4,11 +4,13 @@ function zsh_add_file () {
 
 function zsh_add_plugin () {
     plugin_name=$(echo $1 | cut -d "/" -f 2)
+    alternative_name=$3
     if [ -d "$zsh_config/plugins/$plugin_name" ]; then
         zsh_add_file "plugins/$plugin_name/$plugin_name.plugin.zsh" || \
-        zsh_add_file "plugins/$plugin_name/$plugin_name.zsh"
+        zsh_add_file "plugins/$plugin_name/$plugin_name.zsh" || \
+        zsh_add_file "plugins/$plugin_name/$alternative_name.zsh"
     else
-        git clone "https://github.com/$1.git" "$zsh_config/plugins/$plugin_name"
+        git clone -b $2 "https://github.com/$1.git" "$zsh_config/plugins/$plugin_name"
     fi
 }
 
@@ -27,5 +29,6 @@ function zsh_add_completion() {
   	if [ "$2" = true ] && compinit "${completion_file:1}"
 }
 
-zsh_add_plugin zsh-users/zsh-syntax-highlighting
-zsh_add_plugin zsh-users/zsh-autosuggestions
+zsh_add_plugin zsh-users/zsh-syntax-highlighting 0.7.1
+zsh_add_plugin zsh-users/zsh-autosuggestions v0.7.0
+zsh_add_plugin mafredri/zsh-async v1.8.5 async
