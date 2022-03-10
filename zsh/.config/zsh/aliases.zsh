@@ -6,8 +6,6 @@ alias ret="echo $?"
 alias ls="ls --color"
 alias la="ls -la --color"
 
-if [[ $PLATFORM == 'linux' ]]; then
-    alias open="xdg-open"
-fi
+has xdg-open && alias open="xdg-open"
 
-
+[[ -d $HOME/dotfiles ]] && alias cdd="cd $HOME/dotfiles"
