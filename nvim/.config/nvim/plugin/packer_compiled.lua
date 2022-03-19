@@ -184,11 +184,6 @@ _G.packer_plugins = {
     path = "/Users/nick/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
-  ["surround.nvim"] = {
-    loaded = true,
-    path = "/Users/nick/.local/share/nvim/site/pack/packer/start/surround.nvim",
-    url = "https://github.com/blackCauldron7/surround.nvim"
-  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/Users/nick/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",

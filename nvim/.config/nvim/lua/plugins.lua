@@ -56,7 +56,6 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim" --fuzzy finder
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } --fzf extension for telescope
   use "lewis6991/gitsigns.nvim" --git integration
-  use "blackCauldron7/surround.nvim" --surround selected with {}, [], ...
   --pretty
   use "nvim-lualine/lualine.nvim" --nice status bar
   --cmp
