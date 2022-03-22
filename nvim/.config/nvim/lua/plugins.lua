@@ -77,7 +77,10 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-
+  --colorscheme
+  use {'kdheepak/monochrome.nvim', config = function()
+    vim.cmd 'colorscheme monochrome'
+  end}
 
   --Automatically set up your configuration after cloning packer.nvim
   --Put this at the end after all plugins
