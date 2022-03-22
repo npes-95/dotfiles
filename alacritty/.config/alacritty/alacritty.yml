@@ -15,7 +15,8 @@ window:
     x: 4
     y: 4
 
-  decorations: buttonless
+  decorations: None
+  opacity: 1.0
 
 cursor:
   style:
@@ -24,21 +25,19 @@ cursor:
 
 font:
   normal:
-    family: DejaVuSansMono Nerd Font Mono
+    family: SFMono Nerd Font
     style: Book
 
   bold:
-    family: DejaVuSansMono Nerd Font Mono  
+    family: SFMono Nerd Font
     style: Bold
 
   italic:
-    family: DejaVuSansMono Nerd Font Mono
-    style: Oblique
+    family: SFMono Nerd Font
+    style: Italic
   
   bold_italic:
-    family: DejaVuSansMono Nerd Font Mono
-    style: Bold Oblique
-  
-  size: 14.0
+    family: SFMono Nerd Font
+    style: Bold Italic
   
   use_thin_strokes: true

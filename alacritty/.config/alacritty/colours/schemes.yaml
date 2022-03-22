@@ -717,6 +717,18 @@ schemes:
       cyan:    '0x35434d'
       white:   '0xffffff'
 
+  monochrome: &monochrome
+    primary:
+      background: '0x101010'
+      foreground: '0xEBEBEB'
+    normal:
+      red: '0xeca8a8'
+      green: '0xccd389'
+      yellow: '0xefd5a0'
+      blue: '0xa5c6e1'
+      magenta: '0xe1bee9'
+      cyan: '0xc7ebe6'
+
   nord: &nord
     primary:
       background: '0x2E3440'
@@ -1296,4 +1308,4 @@ schemes:
       cyan:    '0x00ffff'
       white:   '0xffffff'
 
-colors: *base16_dark
+colors: *monochrome
