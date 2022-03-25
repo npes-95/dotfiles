@@ -1,5 +1,3 @@
-# ~/.config/zsh/utils.zsh
-
 has () {
     eval hash $1 2>/dev/null
 }

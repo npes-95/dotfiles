@@ -1,5 +1,3 @@
-# ~/.config/zsh/completion.zsh
-
 # Basic auto/tab complete:
 autoload -Uz compinit
 

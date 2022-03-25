@@ -1,5 +1,3 @@
-# ~/.config/zsh/thirdparty.zsh
-
 thirdparty_dir="$HOME/.config/zsh/thirdparty"
 
 has brew && source $thirdparty_dir/brew.zsh

@@ -1,5 +1,3 @@
-# ~/.config/alacritty/alacritty.yml
-
 import:
   - ~/.config/alacritty/colours/schemes.yaml
 

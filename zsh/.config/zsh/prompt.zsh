@@ -1,5 +1,3 @@
-# ~/.config/zsh/prompt.zsh
-
 autoload -Uz vcs_info # enable vcs_info
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '*'
