@@ -7,8 +7,3 @@ case "$OS" in
   FreeBSD|Darwin) export PLATFORM=mac ;;
   *)              export PLATFORM=unknown ;;
 esac
-
-if [[ $PLATFORM == 'mac' ]]; then
-  PATH="/opt/homebrew/bin:$PATH"
-  PATH="/opt/homebrew/sbin:$PATH"
-fi
