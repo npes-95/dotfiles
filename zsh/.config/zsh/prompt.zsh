@@ -8,25 +8,43 @@ PS1='%1~%f${vcs_info_msg_0_} > '
 
 worker=async_vcs
 
-function _async_vcs_info() {
+function get_vcs_info() {
     cd -q $1
     vcs_info
     print ${vcs_info_msg_0_}
 }
 
-function _async_vcs_info_cb() {
+function on_got_vcs_info() {
+    local err=$2
     local info=$3
+
+    (( err == 0 )) || _async_handle_worker_err err
+
     vcs_info_msg_0_=$info
     zle reset-prompt
 }
 
-function _async_precmd() {
+function precmd_vcs_info() {
     async_flush_jobs $worker
-    async_job $worker _async_vcs_info $PWD
+    async_job $worker get_vcs_info $PWD
 }
 
-async_init
-async_start_worker $worker
-async_register_callback $worker _async_vcs_info_cb
+function _async_init_worker () {
+  async_start_worker $worker
+  async_register_callback $worker on_got_vcs_info
+}
 
-precmd () { _async_precmd } # always load before displaying the prompt
+function _async_handle_worker_err() {
+  local err=$1
+  # workaround for https://github.com/mafredri/zsh-async/issues/42
+  if (( err == 2 )) || (( err == 3)) || (( err == 130 )); then
+    async_stop_worker $worker
+    _async_init_worker
+  fi
+}
+
+
+async_init
+_async_init_worker
+
+precmd () { precmd_vcs_info } # always load before displaying the prompt
