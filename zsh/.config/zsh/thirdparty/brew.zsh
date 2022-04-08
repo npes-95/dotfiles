@@ -1,4 +1,1 @@
-if [[ $PLATFORM == 'mac' ]]; then
-  PATH="/opt/homebrew/bin:$PATH"
-  PATH="/opt/homebrew/sbin:$PATH"
-fi
+PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"

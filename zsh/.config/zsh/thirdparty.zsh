@@ -1,6 +1,9 @@
 thirdparty_dir="$HOME/.config/zsh/thirdparty"
 
-has brew && source $thirdparty_dir/brew.zsh
+if [[ $PLATFORM == 'mac' ]]; then
+  source $thirdparty_dir/brew.zsh
+fi
+
 has cargo && source $thirdparty_dir/cargo.zsh
 has fnm && source $thirdparty_dir/fnm.zsh
 has fzf && source $thirdparty_dir/fzf.zsh
