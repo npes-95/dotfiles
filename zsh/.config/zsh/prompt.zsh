@@ -5,6 +5,7 @@ zstyle ':vcs_info:*' stagedstr '+'
 zstyle ':vcs_info:*' formats ' / %b%u'
 setopt prompt_subst
 PS1='%1~%f${vcs_info_msg_0_} > '
+RPROMPT='%(?..[%?] )'
 
 worker=async_vcs
 
