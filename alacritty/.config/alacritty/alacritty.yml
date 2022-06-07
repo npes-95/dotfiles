@@ -4,9 +4,9 @@ import:
 shell:
   program: /bin/zsh
   args:
-    - --login
+    - -l
     - -c
-    - tmux
+    - /opt/homebrew/bin/tmux 
 
 window:
   padding:
@@ -24,7 +24,7 @@ cursor:
 font:
   normal:
     family: SFMono Nerd Font
-    style: Book
+    style: Regular
 
   bold:
     family: SFMono Nerd Font
