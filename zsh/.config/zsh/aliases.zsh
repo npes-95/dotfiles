@@ -1,6 +1,5 @@
 alias c="clear"
 alias td="todo.sh"
-alias ret="echo $?"
 alias ls="ls --color"
 alias la="ls -la --color"
 
