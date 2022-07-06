@@ -1,3 +1,7 @@
+if [[ $PLATFORM == 'mac' ]] && [[ -d /opt/homebrew/share/zsh-completions ]]; then
+  FPATH="/opt/homebrew/share/zsh-completions:$FPATH"
+fi
+
 # Basic auto/tab complete:
 autoload -Uz compinit
 
