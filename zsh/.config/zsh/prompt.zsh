@@ -2,10 +2,10 @@ autoload -Uz vcs_info # enable vcs_info
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '*'
 zstyle ':vcs_info:*' stagedstr '+'
-zstyle ':vcs_info:*' formats ' / %b%u'
+zstyle ':vcs_info:*' formats ' %b%u '
 setopt prompt_subst
-PS1='%1~%f${vcs_info_msg_0_} > '
-RPROMPT='%(?..[%?] )'
+PS1='[%n@%m:%~] '
+RPROMPT='%f${vcs_info_msg_0_}%(?..[%?] )'
 
 worker=async_vcs
 
