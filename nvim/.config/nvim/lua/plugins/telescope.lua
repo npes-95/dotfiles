@@ -80,7 +80,7 @@ telescope.setup {
   pickers = {
     live_grep = {
       additional_args = function(opts)
-        return {"--hidden"}
+        return { "--hidden" }
       end
     },
     -- Default configuration for builtin pickers goes here:
@@ -99,5 +99,3 @@ telescope.setup {
     -- please take a look at the readme of the extension you want to configure
   },
 }
-
-require('telescope').load_extension('fzf')
