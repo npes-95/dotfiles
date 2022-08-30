@@ -10,3 +10,4 @@ has launchctl && source $thirdparty_dir/launchctl.zsh
 has nvim && source $thirdparty_dir/nvim.zsh
 has rsync && source $thirdparty_dir/rsync.zsh
 has tmux && source $thirdparty_dir/tmux.zsh
+has todo.sh && source $thirdparty_dir/todo.zsh

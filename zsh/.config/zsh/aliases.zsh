@@ -1,5 +1,4 @@
 alias c="clear"
-alias td="todo.sh"
 alias ls="ls --color"
 alias la="ls -la --color"
 
