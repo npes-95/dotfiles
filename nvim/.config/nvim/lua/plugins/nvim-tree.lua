@@ -11,7 +11,7 @@ end
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
-  disable_netrw = true,
+  disable_netrw = false,
   update_cwd = true,
   reload_on_bufenter = true,
   view = {
