@@ -8,6 +8,7 @@ has fzf && source $thirdparty_dir/fzf.zsh
 has git && source $thirdparty_dir/git.zsh
 has launchctl && source $thirdparty_dir/launchctl.zsh
 has nvim && source $thirdparty_dir/nvim.zsh
+has restic && source $thirdparty_dir/restic.zsh
 has rsync && source $thirdparty_dir/rsync.zsh
 has tmux && source $thirdparty_dir/tmux.zsh
 has todo.sh && source $thirdparty_dir/todo.zsh
