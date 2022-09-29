@@ -15,3 +15,9 @@ restic_forget () {
     --prune \
     --keep-within=$1
 }
+
+restic_du () {
+  restic stats --repository-file=$repo_file \
+    --mode raw-data \
+    --verbose
+}
