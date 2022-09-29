@@ -11,9 +11,10 @@ restic_backup () {
 
 restic_forget () {
   restic forget --repository-file=$repo_file \
-    --verbose \
+    --host $(hostname) \
     --prune \
-    --keep-within=$1
+    --keep-within=$1 \
+    --verbose
 }
 
 restic_du () {
