@@ -22,3 +22,8 @@ restic_du () {
     --mode raw-data \
     --verbose
 }
+
+restic_ls () {
+  restic snapshots --repository-file=$repo_file \
+    --verbose
+}
