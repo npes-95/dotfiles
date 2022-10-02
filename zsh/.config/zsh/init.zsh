@@ -22,5 +22,4 @@ source $zsh_config/plugins.zsh
 source $zsh_config/prompt.zsh
 source $zsh_config/thirdparty.zsh
 
-has neofetch && neofetch
 has fortune && fortune && echo "\n"
