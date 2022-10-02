@@ -37,5 +37,3 @@ font:
   bold_italic:
     family: SFMono Nerd Font
     style: Bold Italic
-  
-  use_thin_strokes: true
