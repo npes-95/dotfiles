@@ -55,7 +55,7 @@ return packer.startup(function(use)
   use { "akinsho/toggleterm.nvim", tag = "v2.*" } --terminal window manager
   use "windwp/nvim-autopairs" --autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" --easily comment stuff
-  use { "lewis6991/gitsigns.nvim", tag = "release" } --git integration
+  use { "lewis6991/gitsigns.nvim" } --git integration
 
   --pretty
   use {
