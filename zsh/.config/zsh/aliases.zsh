@@ -4,4 +4,4 @@ alias la="ls -la --color"
 
 has xdg-open && alias open="xdg-open"
 
-[[ -d $HOME/dotfiles ]] && alias cdd="cd $HOME/dotfiles"
+[[ -d "$HOME/dotfiles" ]] && alias cdd="cd $HOME/dotfiles"

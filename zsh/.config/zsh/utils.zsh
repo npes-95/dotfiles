@@ -11,16 +11,16 @@ prof () {
 }
 
 zconf () {
-  pushd $zsh_config
-  $EDITOR $zsh_config/init.zsh
+  pushd "$zsh_config"
+  $EDITOR "$zsh_config/init.zsh"
   popd
 }
 
 mksh () {
-  local filepath=$1
-  local desc=$2
-  local name=${path##*/}
-  touch $filepath
-  echo -e "#!bin/bash\n\n\# $name - $desc" > $filepath
-  chmod +x $filepath
+  local filepath="$1"
+  local desc="$2"
+  local name="${path##*/}"
+  touch "$filepath"
+  echo -e "#!bin/bash\n\n\# $name - $desc" > "$filepath"
+  chmod +x "$filepath"
 }
