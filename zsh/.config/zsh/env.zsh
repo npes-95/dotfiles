@@ -1,7 +1,4 @@
-[[ -z "$OS" ]] && export OS=$(uname)
-case "$OS" in
-  Linux)          export PLATFORM=linux ;;
-  *indows*)       export PLATFORM=windows ;;
-  FreeBSD|Darwin) export PLATFORM=mac ;;
-  *)              export PLATFORM=unknown ;;
-esac
+export LANG=en_US.UTF-8
+
+has vim && export EDITOR=vim || export EDITOR=vi
+has uname && export OS="$(uname)" || export OS=Unknown

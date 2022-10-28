@@ -1,4 +1,4 @@
-if [[ $PLATFORM == 'mac' ]] && [[ -d /opt/homebrew/share/zsh-completions ]]; then
+if [[ "$OS" == "Darwin" ]] && [[ -d /opt/homebrew/share/zsh-completions ]]; then
   FPATH="/opt/homebrew/share/zsh-completions:$FPATH"
 fi
 

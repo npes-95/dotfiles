@@ -1,6 +1,6 @@
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
-if [[ $PLATFORM == 'mac' ]]; then
+if [[ "$OS" == "Darwin" ]]; then
     [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 else
     source /usr/share/fzf/shell/key-bindings.zsh
