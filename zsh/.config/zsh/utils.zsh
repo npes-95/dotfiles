@@ -21,6 +21,6 @@ mksh () {
   local desc="$2"
   local name="${path##*/}"
   touch "$filepath"
-  echo -e "#!bin/bash\n\n\# $name - $desc" > "$filepath"
+  echo -e "#!/bin/bash\n\n\# $name - $desc" > "$filepath"
   chmod +x "$filepath"
 }
