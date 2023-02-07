@@ -1,7 +1,7 @@
+require('plugins.impatient')
 require('options')
 require('keymaps')
 require('autocommands')
-require('plugins.impatient')
 require('plugins')
 require('plugins.autopairs')
 require('plugins.cmp')
