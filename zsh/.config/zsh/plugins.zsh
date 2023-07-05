@@ -16,4 +16,4 @@ function zsh_add_plugin () {
 
 zsh_add_plugin zsh-users/zsh-syntax-highlighting 0.7.1
 zsh_add_plugin zsh-users/zsh-autosuggestions v0.7.0
-zsh_add_plugin mafredri/zsh-async v1.8.5 async
+zsh_add_plugin mafredri/zsh-async v1.8.6 async
