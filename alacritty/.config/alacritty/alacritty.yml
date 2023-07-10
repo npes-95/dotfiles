@@ -1,5 +1,5 @@
 import:
-  - ~/.config/alacritty/colours/schemes.yaml
+  - ~/.config/alacritty/colours/rose-pine.yml
 
 shell:
   program: /bin/zsh

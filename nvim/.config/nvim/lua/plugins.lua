@@ -87,8 +87,8 @@ return packer.startup(function(use)
   }
 
   --colorscheme
-  use { "kdheepak/monochrome.nvim", config = function()
-    vim.cmd "colorscheme monochrome"
+  use { "rose-pine/neovim", as = "rose-pine", config = function()
+    vim.cmd "colorscheme rose-pine"
   end }
 
   --Automatically set up your configuration after cloning packer.nvim
