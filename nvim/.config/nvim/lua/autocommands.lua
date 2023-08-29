@@ -15,6 +15,11 @@ vim.cmd [[
     autocmd FileType markdown setlocal wrap
     autocmd FileType markdown setlocal spell
   augroup end
+  augroup _email_settings
+    autocmd!
+    autocmd FileType mail setlocal wrap
+    autocmd FileType mail setlocal spell
+  augroup end
   augroup _autoresize
     autocmd!
     autocmd VimResized * tabdo wincmd = 
