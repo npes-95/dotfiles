@@ -8,6 +8,7 @@ zle_highlight=('paste:none')
 setopt hist_ignore_dups
 setopt hist_ignore_space
 setopt histignorealldups
+setopt inc_append_history
 autoload history-search-end
 
 zsh_config="$HOME/.config/zsh"
