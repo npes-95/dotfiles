@@ -13,7 +13,7 @@ vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>")
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
 
 -- open netrw
-vim.keymap.set("n", "<leader>e", vim.cmd.Explore)
+vim.keymap.set("n", "<leader>e", vim.cmd.Lexplore)
 
 -- move visual blocks up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
