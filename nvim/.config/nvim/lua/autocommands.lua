@@ -14,7 +14,7 @@ autocmd("TextYankPost", {
 })
 
 autocmd("FileType", {
-  pattern = { "gitcommit", "markdown", "mail" },
+  pattern = { "gitcommit", "markdown", "mail", "text" },
   group = personal,
   command = "setlocal wrap | setlocal spell"
 })
