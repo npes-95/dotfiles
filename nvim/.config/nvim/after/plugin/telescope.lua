@@ -7,4 +7,3 @@ vim.keymap.set('n', '<leader>fk', builtin.keymaps, {})
 
 vim.keymap.set('n', '<leader>fc', builtin.git_commits, {})
 vim.keymap.set('n', '<leader>fb', builtin.git_branches, {})
-vim.keymap.set('n', '<leader>fgf', builtin.git_files, {})
