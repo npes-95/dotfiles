@@ -34,9 +34,9 @@ plugins = {
       local configs = require("nvim-treesitter.configs")
 
       configs.setup({
-        ensure_installed = {"c", "cpp", "lua", "rust", "python", 
+        ensure_installed = {"c", "cpp", "lua", "rust", "python",
           "javascript", "bash", "json", "latex", "make",
-          "html", "cmake", "markdown", "vim", "vimdoc",  
+          "html", "cmake", "markdown", "vim", "vimdoc",
           "gitcommit", "gitignore"
         },
         sync_install = false,
