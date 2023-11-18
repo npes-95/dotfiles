@@ -51,7 +51,6 @@ plugins = {
     dependencies = { "nvim-lua/plenary.nvim" }
   },
   { "mbbill/undotree" },
-  { "tpope/vim-fugitive" },
   {
     "VonHeikemen/lsp-zero.nvim",
     branch = "v2.x",
