@@ -53,6 +53,11 @@ plugins = {
   { "mbbill/undotree" },
   { "lewis6991/gitsigns.nvim" },
   {
+    "nvim-tree/nvim-tree.lua",
+    lazy = false,
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+  {
     "VonHeikemen/lsp-zero.nvim",
     branch = "v2.x",
     dependencies = {

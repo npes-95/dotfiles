@@ -18,9 +18,3 @@ autocmd("FileType", {
   group = personal,
   command = "setlocal wrap | setlocal spell"
 })
-
-autocmd("FileType", {
-  pattern = { "fugitive", "help" },
-  group = personal,
-  command = "setlocal laststatus=0"
-})
