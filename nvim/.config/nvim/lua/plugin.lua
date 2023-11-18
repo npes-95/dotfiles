@@ -51,6 +51,7 @@ plugins = {
     dependencies = { "nvim-lua/plenary.nvim" }
   },
   { "mbbill/undotree" },
+  { "lewis6991/gitsigns.nvim" },
   {
     "VonHeikemen/lsp-zero.nvim",
     branch = "v2.x",
