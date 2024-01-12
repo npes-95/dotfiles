@@ -1,5 +1,5 @@
 vim.o.number  = true
-vim.o.relativenumber = false
+vim.o.relativenumber = true
 vim.o.wrap = false
 vim.o.expandtab = true
 vim.o.smartindent = true
