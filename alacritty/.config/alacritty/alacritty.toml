@@ -1,0 +1,29 @@
+import = ["/Users/nick/.config/alacritty/colours/rose-pine.toml"]
+
+[font.bold]
+family = "SFMono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "SFMono Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "SFMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "SFMono Nerd Font"
+style = "Regular"
+
+[shell]
+args = ["-l", "-c", "/opt/homebrew/bin/tmux"]
+program = "/bin/zsh"
+
+[window]
+decorations = "Buttonless"
+opacity = 1.0
+
+[window.padding]
+x = 4
+y = 4
