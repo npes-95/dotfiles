@@ -17,10 +17,7 @@ zconf () {
 }
 
 mksh () {
-  local filepath="$1"
-  local desc="$2"
-  local name="${filepath##*/}"
-  touch "$filepath"
-  echo -e "#!/bin/bash\n\n# $name - $desc" > "$filepath"
-  chmod +x "$filepath"
+  touch "$1"
+  echo -e "#!/bin/bash" > "$1"
+  chmod +x "$1"
 }
