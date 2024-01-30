@@ -31,5 +31,6 @@ require("gitsigns").setup {
     map('n', '<leader>gR', gs.reset_buffer)
     map('n', '<leader>gp', gs.preview_hunk)
     map('n', '<leader>gb', gs.toggle_current_line_blame)
+    map('n', '<leader>gB', function() gs.blame_line{full=true} end)
   end
 }
