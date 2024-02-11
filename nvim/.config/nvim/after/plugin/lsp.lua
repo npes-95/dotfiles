@@ -12,7 +12,17 @@ lsp.ensure_installed({
 })
 
 lsp.on_attach(function(client, bufnr)
-  lsp.default_keymaps({buffer = bufnr})
+  local opts = { buffer = bufnr }
+
+  lsp.default_keymaps(opts)
+
+  vim.keymap.set("n", "<leader>lf", function()
+    vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
+  end, opts)
+
+  vim.keymap.set("n", "<leader>lr", function()
+    vim.lsp.buf.rename()
+  end, opts)
 end)
 
 lsp.setup()
