@@ -1,1 +1,0 @@
-alias td="todo.sh"
