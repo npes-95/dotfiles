@@ -1,0 +1,57 @@
+#!/bin/bash
+
+lang="${1:-c}"
+target_dir="${2:-.}"
+
+if [[ ! -d "$target_dir" ]]; then
+  echo "Target directory doesn't exist"
+  exit 1
+fi
+
+if [[ "$lang" !=  "c" && "$lang" != "cpp" ]]; then
+  echo "Unknown language (supported: c, cpp)"
+  exit 1
+fi
+
+pushd "$target_dir" || exit 1
+
+project="$(basename "$PWD")"
+files=(*."$lang")
+
+if [[ "$lang" == "c" ]]; then
+  compiler="cc"
+  compiler_flags="-std=c17"
+  compiler_flags_var="CFLAGS"
+else
+  compiler="c++"
+  compiler_flags="-std=c++17"
+  compiler_flags_var="CXXFLAGS"
+fi
+
+# note: remember to indent Makefiles with tabs
+cat > Makefile<< EOF
+# $project
+
+SRC = ${files[@]}
+OBJ = ${files[@]/.$lang/.o}
+
+$compiler_flags_var = $compiler_flags -pedantic -Wall -g
+LDFLAGS = 
+
+all: $project
+
+.c.o:
+	$compiler -c \${$compiler_flags_var} \$<
+
+$project: \${OBJ}
+	$compiler -o \$@ \${OBJ} \${LDFLAGS}
+
+clean:
+	rm -f $project \${OBJ}
+
+.PHONY: all clean
+EOF
+
+popd || exit 1
+
+

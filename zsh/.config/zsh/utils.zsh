@@ -15,9 +15,3 @@ zconf () {
   $EDITOR "$zsh_config/init.zsh"
   popd
 }
-
-mksh () {
-  touch "$1"
-  echo -e "#!/bin/bash" > "$1"
-  chmod +x "$1"
-}

@@ -2,6 +2,7 @@ thirdparty_dir="$HOME/.config/zsh/thirdparty"
 
 [[ -d /opt/homebrew ]] && source "$thirdparty_dir/brew.zsh"
 [[ -d "$HOME/.cargo" ]] && source "$thirdparty_dir/cargo.zsh"
+[[ -d "$HOME/.local/bin/scripts" ]] && source "$thirdparty_dir/scripts.zsh"
 
 has fnm && source "$thirdparty_dir/fnm.zsh"
 has fzf && source "$thirdparty_dir/fzf.zsh"
