@@ -15,3 +15,7 @@ zconf () {
   $EDITOR "$zsh_config/init.zsh"
   popd
 }
+
+calc () {
+  echo $(($@))
+}
