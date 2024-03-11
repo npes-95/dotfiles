@@ -30,7 +30,6 @@ require("gitsigns").setup {
     map('n', '<leader>gu', gs.undo_stage_hunk)
     map('n', '<leader>gR', gs.reset_buffer)
     map('n', '<leader>gp', gs.preview_hunk)
-    map('n', '<leader>gb', gs.toggle_current_line_blame)
-    map('n', '<leader>gB', function() gs.blame_line{full=true} end)
+    map('n', '<leader>gB', gs.toggle_current_line_blame)
   end
 }
