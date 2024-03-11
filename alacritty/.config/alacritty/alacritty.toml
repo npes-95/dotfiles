@@ -21,7 +21,6 @@ args = ["-l", "-c", "/opt/homebrew/bin/tmux"]
 program = "/bin/zsh"
 
 [window]
-decorations = "Buttonless"
 opacity = 1.0
 
 [window.padding]
