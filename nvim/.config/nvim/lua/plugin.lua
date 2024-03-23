@@ -37,7 +37,7 @@ plugins = {
         ensure_installed = {"c", "cpp", "lua", "rust", "python",
           "javascript", "bash", "json", "latex", "make",
           "html", "cmake", "markdown", "vim", "vimdoc",
-          "gitcommit", "gitignore"
+          "gitcommit", "gitignore", "haskell"
         },
         sync_install = false,
         highlight = { enable = true },
