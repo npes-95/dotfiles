@@ -18,3 +18,8 @@ autocmd("FileType", {
   group = personal,
   command = "setlocal wrap | setlocal spell"
 })
+
+autocmd("TermOpen", {
+  group = personal,
+  command = "setlocal listchars= nonumber norelativenumber"
+})
