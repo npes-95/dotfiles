@@ -1,12 +1,8 @@
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	required = true
-	process = git-lfs filter-process
-[user]
-	name = npes-95
-	email = npe.smith.95@gmail.com
-[pull]
-	rebase = false
+[init]
+  defaultBranch = main
+
+[commit]
+  verbose = true
+
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+  insteadOf = https://github.com/
