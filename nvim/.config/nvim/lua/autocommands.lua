@@ -23,3 +23,13 @@ autocmd("TermOpen", {
   group = personal,
   command = "setlocal listchars= nonumber norelativenumber"
 })
+
+autocmd("BufWritePre", {
+  pattern = { "*.h", "*.c", "*.cpp" },
+  group = personal,
+  callback = function(ev)
+    cursor_pos = vim.fn.getpos(".")
+    pcall(function() vim.cmd([[%s/\s\+$//e]]) end)
+    vim.fn.setpos(".", cursor_pos)
+  end,
+})
