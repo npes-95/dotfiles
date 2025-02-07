@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# sr - recursively search and replace text inplace
+
+old="$1"
+new="$2"
+
+if [[ ! $(uname) == "Darwin" ]]; then
+  echo "Not imeplemented for $(uname)"
+  exit 1
+fi
+
+rg -l "$old" | parallel "sed -i '' -e 's/$old/$new/g'"
