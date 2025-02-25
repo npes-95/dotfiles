@@ -1,6 +1,20 @@
+[column]
+  ui = auto
+[branch]
+  sort = -committerdate
+[tag]
+  sort = version:refname
 [init]
   defaultBranch = main
-
+[diff]
+  algorithm = histogram
+  colorMoved = plain
+  renames = true
+[push]
+  default = simple
+  autoSetupRemote = true
+[help]
+  autocorrect = prompt
 [commit]
   verbose = true
 
