@@ -12,6 +12,10 @@ vim.keymap.set("n", "<C-Down>", ":resize +2<CR>")
 vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>")
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
 
+-- navigate between buffers using JK
+vim.keymap.set("n", "J", ":bp<CR>")
+vim.keymap.set("n", "K", ":bn<CR>")
+
 -- move visual blocks up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv")
