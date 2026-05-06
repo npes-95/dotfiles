@@ -1,5 +1,5 @@
 has () {
-    eval hash $1 2>/dev/null
+    command -v "$1" >/dev/null 2>&1
 }
 
 reload () {
