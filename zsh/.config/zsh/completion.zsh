@@ -5,10 +5,16 @@ fi
 # basic auto/tab complete:
 autoload -Uz compinit
 
-if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
-  compinit
-else
-  compinit -C
+zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
+
+# load completions instantly from the cached dump; never block startup on
+# the security audit or a staleness check
+compinit -C -d "$zcompdump"
+
+# once a day, regenerate the dump (picking up newly installed completions
+# and re-running the audit) in the background, ready for the next shell
+if [[ ! -s "$zcompdump" || -n ${zcompdump}(#qN.mh+24) ]]; then
+  { compinit -u -d "$zcompdump" } &!
 fi
 
 zmodload zsh/complist
@@ -26,7 +32,6 @@ zstyle ':completion:*' menu select
 
 # compile zcompdump in background, if modified, to increase startup speed.
 {
-  zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
   if [[ -s "$zcompdump" && (! -s "${zcompdump}.zwc" || "$zcompdump" -nt "${zcompdump}.zwc") ]]; then
     zcompile "$zcompdump"
   fi
