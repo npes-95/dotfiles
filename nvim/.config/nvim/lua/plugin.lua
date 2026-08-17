@@ -31,20 +31,25 @@ local plugins = {
   },
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
+    lazy = false,
     build = ":TSUpdate",
     config = function()
-      local configs = require("nvim-treesitter.configs")
+      require("nvim-treesitter").setup()
+      require("nvim-treesitter").install({
+        "c", "cpp", "lua", "rust", "python",
+        "javascript", "bash", "json", "latex", "make",
+        "html", "cmake", "markdown", "markdown_inline", "vim", "vimdoc",
+        "gitcommit", "gitignore", "haskell", "xml", "robot",
+      })
 
-      configs.setup({
-        ensure_installed = {"c", "cpp", "lua", "rust", "python",
-          "javascript", "bash", "json", "latex", "make",
-          "html", "cmake", "markdown", "vim", "vimdoc",
-          "gitcommit", "gitignore", "haskell"
-        },
-        sync_install = false,
-        highlight = { enable = true },
-        indent = { enable = true },
-        additional_vim_regex_highlighting = false,
+      vim.api.nvim_create_autocmd("FileType", {
+        callback = function(ev)
+          if not pcall(vim.treesitter.start) then
+            return
+          end
+          vim.bo[ev.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        end,
       })
     end
   },
